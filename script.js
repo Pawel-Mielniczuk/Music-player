@@ -133,10 +133,3 @@ audio.addEventListener('timeupdate', function() {
      showDurationEl.textContent = `${hours ? hours : '00'}:${minutes ? minutes : '00'}:${seconds ? seconds: '00'}`;
 
 });
-
-
-
-
-
-
-
