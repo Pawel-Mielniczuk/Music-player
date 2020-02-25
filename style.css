@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   background-color:#BAD1EB;
   height: 100vh;
@@ -11,6 +15,7 @@ body {
   justify-content: center;
   margin: 0;
   color:#715B71;
+  font-family: 'Open Sans';
 }
 
 h1 {
@@ -20,7 +25,7 @@ h1 {
 .music-player {
   height: 80vh;
   width: 25vw;
-  min-width: 300px;
+  min-width: 18.750em;  /*300px*/
   box-shadow: 5px 18px 28px #715B71;
   border-radius: 25px;
   display: flex;
@@ -40,13 +45,13 @@ h1 {
   }
 }
 
-.cd {
+.cd-record {
   position: relative;
   border-radius: 50%;
   object-fit: cover;
-  height: 160px;
-  width: 160px;
-  margin-top: 40px;
+  height: 10.000em;
+  width: 10.000em;
+  margin-top: 1.250em;
   animation: rotate 3s linear infinite;
 
   animation-play-state: paused;
@@ -58,12 +63,13 @@ h1 {
   background-size: 50% 100%, 100% 50%, 100% 100%;
 }
 
-.cd::after {
+.cd-record::after {
   position: absolute;
   top: 50%; left: 50%;
-  margin: -35px;
+  margin: -2.188em;
   border: solid 1px #d9a388;
-  width: 68px; height: 68px;
+  width: 4.225em;
+  height: 4.225em;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #da5b33,
   inset 0 0 0 27px #da5b33;
@@ -71,20 +77,21 @@ h1 {
   content: '';
 }
 
-.music-player.play .cd {
+.music-player.play .cd-record {
   animation-play-state: running;
 }
 
 .greeting-para {
   font-weight: 700;
+  margin-top: .625em;
 }
 
 .progress-container {
-  background: #fff;
+  background: #ffffff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px 0;
-  height: 4px;
+  margin: .625em 0;
+  height: .250em;
   width: 95%;
 }
 
@@ -92,7 +99,7 @@ h1 {
   background-color: #C51745;
   border-radius: 5px;
   height: 100%;
-  width: 0%;
+  width: 0;
   transition: width 0.1s linear;
 }
 
@@ -100,7 +107,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
   margin-top: 2em;
 }
 
@@ -109,10 +115,10 @@ h1 {
   border:none;
   border-radius: 50%;
   color: #715B71;
-  font-size: 28px;
+  font-size: 1.750em;
   cursor: pointer;
-  padding: 10px;
-  margin: 0 20px;
+  padding: .625em;
+  margin: 0 1.250em
 }
 
 .action-btn:focus {
